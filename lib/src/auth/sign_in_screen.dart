@@ -164,7 +164,7 @@ class SignInScreen extends StatelessWidget {
                       ),
                       side: const BorderSide(
                         width: 2,
-                        color: Colors.green,
+                        color: Colors.blue,
                       ),
                     ),
                     onPressed: () {},
@@ -183,6 +183,3 @@ class SignInScreen extends StatelessWidget {
       ),
     );
   }
-}
-
-///oiii
