@@ -6,6 +6,7 @@ class CustomTextField extends StatefulWidget {
   final String label;
   final bool isSecret;
 
+  // ignore: use_super_parameters
   const CustomTextField({
     Key? key,
     required this.icon,
@@ -22,7 +23,6 @@ class _CustomTextFieldState extends State<CustomTextField> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
 
     isObscure = widget.isSecret;
@@ -40,7 +40,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
               ? IconButton(
                   onPressed: () {
                     setState(() {
-                      isObscure = isObscure;
+                      isObscure = !isObscure;
                     });
                   },
                   icon:
