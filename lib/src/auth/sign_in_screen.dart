@@ -1,6 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/src/auth/components/custom_text_field.dart';
+import 'package:flutter_application_1/src/auth/config/custom_colors.dart';
 
 class SignInScreen extends StatelessWidget {
   // ignore: use_super_parameters
@@ -9,7 +10,7 @@ class SignInScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 108, 149, 225),
+      backgroundColor: const Color.fromARGB(255, 241, 231, 177),
       body: Column(
         children: [
           // ignore: prefer_const_constructors
@@ -18,7 +19,7 @@ class SignInScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                //Nome do
+                //Nome do app
                 const Text.rich(
                   TextSpan(
                     style: TextStyle(
@@ -28,14 +29,14 @@ class SignInScreen extends StatelessWidget {
                       TextSpan(
                         text: 'Quitanda',
                         style: TextStyle(
-                          color: Colors.red,
+                          color: Color.fromARGB(255, 46, 92, 50),
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       TextSpan(
                         text: 'Virtual',
                         style: TextStyle(
-                          color: Colors.green,
+                          color: Color.fromARGB(255, 145, 10, 0),
                         ),
                       ),
                     ],
@@ -46,8 +47,9 @@ class SignInScreen extends StatelessWidget {
                 SizedBox(
                   height: 30,
                   child: DefaultTextStyle(
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 25,
+                      color: Color.fromARGB(255, 0, 0, 0),
                     ),
                     child: AnimatedTextKit(
                       pause: Duration.zero,
@@ -105,14 +107,15 @@ class SignInScreen extends StatelessWidget {
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18),
-                    )),
+                          borderRadius: BorderRadius.circular(18),
+                        ),
+                        side: const BorderSide(
+                            color: Color.fromARGB(255, 117, 107, 107))),
                     onPressed: () {},
                     child: const Text(
                       'Entrar',
                       style: TextStyle(
-                        fontSize: 18,
-                      ),
+                          fontSize: 18, color: Color.fromARGB(255, 46, 46, 46)),
                     ),
                   ),
                 ),
@@ -164,13 +167,14 @@ class SignInScreen extends StatelessWidget {
                       ),
                       side: const BorderSide(
                         width: 2,
-                        color: Colors.blue,
+                        color: Color.fromARGB(255, 145, 119, 119),
                       ),
                     ),
                     onPressed: () {},
                     child: const Text(
                       'Criar Conta',
                       style: TextStyle(
+                        color: Color.fromARGB(255, 46, 46, 46),
                         fontSize: 18,
                       ),
                     ),
