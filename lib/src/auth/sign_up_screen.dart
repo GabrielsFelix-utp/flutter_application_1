@@ -9,6 +9,11 @@ class SignUpScreen extends StatelessWidget {
   final cpfFormatter = MaskTextInputFormatter(
     mask: '###.###.###-##', filter: {'#': RegExp(r'[0-9]')},
   );
+
+   final phoneFormatter = MaskTextInputFormatter(
+    mask: '## # ####-####', filter: {'#': RegExp(r'[0-9]')},
+  );
+
   @override
   Widget build(BuildContext context) {
     final Size = MediaQuery.of(context).size;
@@ -65,9 +70,10 @@ class SignUpScreen extends StatelessWidget {
                               icon: Icons.person,
                               label: 'Nome',
                             ),
-                            const CustomTextField(
+                             CustomTextField(
                               icon: Icons.phone,
                               label: 'Celular',
+                              InputFormatters: [phoneFormatter],
                             ),
                              CustomTextField(
                               icon: Icons.file_copy,

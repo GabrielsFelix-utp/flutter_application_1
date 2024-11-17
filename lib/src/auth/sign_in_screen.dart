@@ -1,5 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/src/auth/Base/base_screen.dart';
 import 'package:flutter_application_1/src/auth/components/custom_text_field.dart';
 import 'package:flutter_application_1/src/auth/config/custom_colors.dart';
 import 'package:flutter_application_1/src/auth/sign_up_screen.dart';
@@ -121,10 +122,10 @@ class SignInScreen extends StatelessWidget {
                                 side: const BorderSide(
                                     color: Color.fromARGB(255, 117, 107, 107))),
                             onPressed: () {
-                              Navigator.of(context).push(
+                              Navigator.of(context).pushReplacement(
                                 MaterialPageRoute(
                                   builder: (c) {
-                                    return SignInScreen();
+                                    return BaseScreen();
                                   },
                                 ),
                               );
@@ -191,7 +192,7 @@ class SignInScreen extends StatelessWidget {
                             onPressed: () {
                               Navigator.of(context).push(
                                 MaterialPageRoute(builder: (C) {
-                                  return SignUpScreen(); 
+                                  return SignUpScreen();
                                 }),
                               );
                             },
