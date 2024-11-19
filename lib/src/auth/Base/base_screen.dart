@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/src/auth/home/home_tab.dart';
 
 class BaseScreen extends StatefulWidget {
   BaseScreen({super.key});
@@ -23,7 +24,7 @@ class _BaseScreenState extends State<BaseScreen> {
           });
         },
         children: [
-          Container(color: Colors.red),
+          const HomeTab(),
           Container(color: Colors.yellow),
           Container(color: Colors.green),
           Container(color: Colors.purple),
