@@ -24,7 +24,7 @@ class _BaseScreenState extends State<BaseScreen> {
           });
         },
         children: [
-          const HomeTab(),
+          HomeTab(),
           Container(color: Colors.yellow),
           Container(color: Colors.green),
           Container(color: Colors.purple),
