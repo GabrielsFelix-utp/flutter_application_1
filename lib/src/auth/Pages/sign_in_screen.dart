@@ -146,7 +146,7 @@ class SignInScreen extends StatelessWidget {
                             child: const Text(
                               'Esqueceu a senha?',
                               style: TextStyle(
-                                color: Colors.red,
+                                color: Color.fromARGB(255, 233, 30, 30),
                               ),
                             ),
                           ),

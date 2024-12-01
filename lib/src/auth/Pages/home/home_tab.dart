@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/src/auth/Pages/home/Components/item_tile.dart';
 import 'package:flutter_application_1/src/auth/config/custom_colors.dart';
 import 'package:flutter_application_1/src/auth/Pages/home/Components/category_tile.dart';
 import 'package:flutter_application_1/src/auth/config/app_data.dart' as appData;
@@ -134,14 +135,14 @@ class _HomeTabState extends State<HomeTab> {
               physics: const BouncingScrollPhysics(),
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
-                mainAxisExtent: 10,
+                mainAxisSpacing: 10,
                 crossAxisSpacing: 10,
                 childAspectRatio: 9 / 11.5,
               ),
               itemCount: appData.items.length,
-              itemBuilder: (_, Index) {
-                return Container(
-                  color: Colors.red,
+              itemBuilder: (_, index) {
+                return ItemTile(
+                  item: appData.items[index],
                 );
               },
             ),
