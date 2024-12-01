@@ -19,12 +19,13 @@ class ItemTile extends StatelessWidget {
       ),
       child: Column(
         children: [
-          //Imagem
+          //imagem
           Image.asset(item.imgUrl),
 
           //Nome
           Text(item.itemName),
-          //Preço
+
+          //preço - unidade
         ],
       ),
     );
