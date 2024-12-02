@@ -1,11 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/src/auth/config/custom_colors.dart';
 
 class QuantityWidgets extends StatelessWidget {
-  const QuantityWidgets({Key? key}) : super(key: key);
+  final int value;
+  final String suffixText;
+  final Function(int quantity) result;
+
+  const QuantityWidgets({
+    Key? key,
+    required this.suffixText,
+    required this.value,
+    required this.result,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.all(4),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(50),
@@ -19,10 +30,72 @@ class QuantityWidgets extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Container(
-            decoration: BoxDecoration(),
-          )
+          _QuantityButton(
+            icon: Icons.remove,
+            color: Colors.grey,
+            onPressed: () {
+              if (value == 1) return;
+
+              int resultCount = value - 1;
+              result(resultCount);
+            },
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 6),
+            child: Text(
+              '$value$suffixText',
+              style: const TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          _QuantityButton(
+            icon: Icons.add,
+            color: CustomColors.customSwatchColor,
+            onPressed: () {
+              int resultCount = value + 1;
+
+              result(resultCount);
+            },
+          ),
         ],
+      ),
+    );
+  }
+}
+
+class _QuantityButton extends StatelessWidget {
+  final Color color;
+  final IconData icon;
+  final VoidCallback onPressed;
+
+  const _QuantityButton({
+    Key? key,
+    required this.color,
+    required this.icon,
+    required this.onPressed,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      child: InkWell(
+        borderRadius: BorderRadius.circular(50),
+        onTap: onPressed,
+        child: Ink(
+          height: 25,
+          width: 25,
+          decoration: BoxDecoration(
+            color: color,
+            shape: BoxShape.circle,
+          ),
+          child: Icon(
+            icon,
+            color: Colors.white,
+            size: 16,
+          ),
+        ),
       ),
     );
   }
