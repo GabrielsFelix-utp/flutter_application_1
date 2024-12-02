@@ -1,3 +1,4 @@
+import 'package:flutter_application_1/src/auth/Models/cart_item_model.dart';
 import 'package:flutter_application_1/src/auth/Models/item_model.dart';
 
 //Maçã
@@ -70,4 +71,19 @@ List<String> categories = [
   'Temperos',
   'Legumes',
   'Grãos',
+];
+
+List<CartItemModel> cartItems = [
+  CartItemModel(
+    item: apple,
+    quantity: 2,
+  ),
+  CartItemModel(
+    item: mango,
+    quantity: 1,
+  ),
+  CartItemModel(
+    item: guava,
+    quantity: 3,
+  ),
 ];
