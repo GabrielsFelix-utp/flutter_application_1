@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/src/auth/Pages/cart/cart_tab.dart';
 import 'package:flutter_application_1/src/auth/Pages/home/home_tab.dart';
+import 'package:flutter_application_1/src/auth/Pages/profile/profile_tab.dart';
 
 class BaseScreen extends StatefulWidget {
   BaseScreen({super.key});
@@ -25,10 +26,10 @@ class _BaseScreenState extends State<BaseScreen> {
           });
         },
         children: [
-           HomeTab(),
-           CartTab(),
+          const HomeTab(),
+          const CartTab(),
           Container(color: Colors.green),
-          Container(color: Colors.purple),
+          const ProfileTab(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(

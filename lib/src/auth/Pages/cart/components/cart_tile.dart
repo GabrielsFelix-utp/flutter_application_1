@@ -53,21 +53,13 @@ class _CartTileState extends State<CartTile> {
         ),
         //Quantidade
         trailing: QuantityWidgets(
-          ///////
-          suffixText: widget.cartItem.item.unit,
-          value: widget.cartItem.quantity,
-          result: (quantity) {
-            setState(() {
-              widget.cartItem.quantity = quantity;
-
-              if (quantity == 0) {
-                //remover item do carrinho
-                widget.remove(widget.cartItem);
-              }
-            });
-          },
-          isRemovable: true,
-        ),
+            suffixText: widget.cartItem.item.unit,
+            value: widget.cartItem.quantity,
+            result: (quantity) {
+              setState(() {
+                widget.cartItem.quantity = quantity;
+              });
+            }),
       ),
     );
   }

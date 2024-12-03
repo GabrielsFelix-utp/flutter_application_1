@@ -1,5 +1,6 @@
 import 'package:flutter_application_1/src/auth/Models/cart_item_model.dart';
 import 'package:flutter_application_1/src/auth/Models/item_model.dart';
+import 'package:flutter_application_1/src/auth/Models/user_model.dart';
 
 //Maçã
 ItemModel apple = ItemModel(
@@ -35,7 +36,7 @@ ItemModel kiwi = ItemModel(
   imgUrl: 'assets/fruits/kiwi.png',
   itemName: 'Kiwi',
   price: 2.5,
-  unit: 'kg',
+  unit: 'un',
 );
 //Manga
 ItemModel mango = ItemModel(
@@ -87,3 +88,11 @@ List<CartItemModel> cartItems = [
     quantity: 3,
   ),
 ];
+
+UserModel user = UserModel(
+  phone: '99 9 9999-9999',
+  cpf: '999.999.999-99',
+  email: 'joao@gmail.com',
+  name: 'João',
+  password: '',
+);
