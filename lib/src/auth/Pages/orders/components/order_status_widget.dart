@@ -37,7 +37,9 @@ class OrderStatusWidget extends StatelessWidget {
             isActive: true,
             title: 'Pix Estornado',
           ),
-        ],
+        ] else if (isOverdue) ...[
+          const _StatusDot(isActive: true, title: 'Pagamento Pix vencido'),
+        ]
       ],
     );
   }
