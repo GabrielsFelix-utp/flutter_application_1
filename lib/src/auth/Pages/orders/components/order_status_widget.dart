@@ -14,7 +14,7 @@ class OrderStatusWidget extends StatelessWidget {
     'delivered': 5,
   };
 
-  int get currentStatus => allStatus[status]!; //verificar por favor
+  int get currentStatus => allStatus[status] ?? -1; //verificar por favor
 
   OrderStatusWidget({
     Key? key,
@@ -31,15 +31,47 @@ class OrderStatusWidget extends StatelessWidget {
           isActive: true,
           title: 'Pedido confirmado',
         ),
+
         const _CustomDivider(),
         if (currentStatus == 1) ...[
+
           const _StatusDot(
             isActive: true,
             title: 'Pix Estornado',
           ),
         ] else if (isOverdue) ...[
-          const _StatusDot(isActive: true, title: 'Pagamento Pix vencido'),
-        ]
+          const _StatusDot(
+            isActive: true, 
+            title: 'Pagamento Pix vencido',
+          ),
+        ] else ...[
+
+          _StatusDot(
+            isActive: currentStatus >= 2, 
+            title: 'Pagamento',
+          ),
+
+          const _CustomDivider(),
+
+          _StatusDot(
+            isActive: currentStatus >= 3, 
+            title: 'Preparando',
+          ),
+
+          const _CustomDivider(),
+
+          _StatusDot(
+            isActive: currentStatus >= 4, 
+            title: 'Envio',
+          ),
+
+          const _CustomDivider(),
+
+          _StatusDot(
+            isActive: currentStatus == 5, 
+            title: 'Entregue',
+          ),
+        ],
       ],
     );
   }

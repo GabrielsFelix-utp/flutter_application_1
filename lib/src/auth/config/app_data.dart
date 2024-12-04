@@ -96,7 +96,7 @@ UserModel user = UserModel(
   cpf: '999.999.999-99',
   email: 'joao@gmail.com',
   name: 'João',
-  password: '',
+  password: '0',
 );
 
 List<OrderModel> orders = [
@@ -104,13 +104,13 @@ List<OrderModel> orders = [
   OrderModel(
     copyAndPaste: 'fnsdjf45454',
     createdDateTime: DateTime.parse(
-      '2021-06-08 10:00:10.458',
+      '2025-06-08 10:00:10.458',
     ),
     overdueDateTime: DateTime.parse(
-      '2021-06-08 11:00:10.458',
+      '2025-06-08 11:00:10.458',
     ),
     id: "jdfksjd8787",
-    status: 'pending_payment',
+    status: 'preparing_purchase',
     total: 11.0,
     items: [
       CartItemModel(
@@ -128,13 +128,13 @@ List<OrderModel> orders = [
   OrderModel(
     copyAndPaste: 'djasdbaks55',
     createdDateTime: DateTime.parse(
-      '2021-06-08 10:00:10.458',
+      '2024-06-08 10:00:10.458',
     ),
     overdueDateTime: DateTime.parse(
-      '2021-06-08 11:00:10.458',
+      '2024-06-08 11:00:10.458',
     ),
     id: "dfsd5464sdf",
-    status: 'refunded',
+    status: 'delivered',
     total: 15.5,
     items: [
       CartItemModel(
