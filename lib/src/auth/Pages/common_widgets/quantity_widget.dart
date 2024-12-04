@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/src/auth/config/custom_colors.dart';
 
@@ -34,13 +36,15 @@ class QuantityWidgets extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           _QuantityButton(
-            icon:
-                !isRemovable || value > 1 ? Icons.remove : Icons.delete_forever,
-            color: !isRemovable || value > 1 ? Colors.grey : Colors.red,
+            icon: isRemovable || value > 1 ? Icons.remove : Icons.delete_forever,
+            color: isRemovable || value > 1 ? Colors.grey : Colors.red,
             onPressed: () {
-              if (value == 1 && !isRemovable) {
-                int resultCount = value - 1;
-                result(resultCount);
+              if (value > 1) {
+                result(value - 1);
+              }
+              else if (value == 1 && isRemovable) {
+                result(0);
+                
               }
             },
           ),
