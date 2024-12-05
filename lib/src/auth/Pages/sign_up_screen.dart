@@ -21,7 +21,7 @@ class SignUpScreen extends StatelessWidget {
     final Size = MediaQuery.of(context).size;
 
     return Scaffold(
-      backgroundColor: CustomColors.customSwatchColor,
+      backgroundColor: const Color.fromARGB(255, 241, 231, 177),
       body: SingleChildScrollView(
         child: SizedBox(
           height: Size.height,
@@ -37,7 +37,7 @@ class SignUpScreen extends StatelessWidget {
                           child: Text(
                             'Cadastro',
                             style: TextStyle(
-                              color: Colors.white,
+                              color: Color.fromARGB(255, 46, 92, 50),
                               fontSize: 35,
                             ),
                           ),
@@ -94,6 +94,7 @@ class SignUpScreen extends StatelessWidget {
                                 child: const Text(
                                   'Cadastrar Usuário',
                                   style: TextStyle(
+                                    color: Color.fromARGB(255, 46, 92, 50),
                                     fontSize: 18,
                                   ),
                                 ),
@@ -109,7 +110,7 @@ class SignUpScreen extends StatelessWidget {
                                   },
                                   icon: const Icon(
                                     Icons.arrow_back_ios,
-                                    color: Colors.purple,
+                                    color: Color.fromARGB(255, 46, 92, 50),
                                   ),
                                 ),
                               ),
