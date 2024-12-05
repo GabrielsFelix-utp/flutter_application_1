@@ -59,6 +59,16 @@ ItemModel papaya = ItemModel(
   unit: 'kg',
 );
 
+//banana
+ItemModel banana = ItemModel(
+  description:
+      'O Melhor Banana da região e que conta com o melhor preço de qualquer quitanda',
+  imgUrl: 'assets/fruits/papaya.png',
+  itemName: 'Banana',
+  price: 1,
+  unit: 'un',
+);
+
 List<ItemModel> items = [
   apple,
   grape,
@@ -66,14 +76,13 @@ List<ItemModel> items = [
   kiwi,
   mango,
   papaya,
+  banana,
 ];
 
 List<String> categories = [
   'Frutas',
   'Verduras',
-  'Temperos',
   'Legumes',
-  'Grãos',
 ];
 
 List<CartItemModel> cartItems = [
@@ -83,11 +92,11 @@ List<CartItemModel> cartItems = [
   ),
   CartItemModel(
     item: mango,
-    quantity: 1,
+    quantity: 2,
   ),
   CartItemModel(
     item: guava,
-    quantity: 2,
+    quantity: 3,
   ),
 ];
 

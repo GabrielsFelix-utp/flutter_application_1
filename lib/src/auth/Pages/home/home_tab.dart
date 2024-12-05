@@ -4,6 +4,8 @@ import 'package:flutter_application_1/src/auth/Pages/home/Components/item_tile.d
 import 'package:flutter_application_1/src/auth/config/custom_colors.dart';
 import 'package:flutter_application_1/src/auth/Pages/home/Components/category_tile.dart';
 import 'package:flutter_application_1/src/auth/config/app_data.dart' as appData;
+import 'package:flutter_application_1/src/auth/Pages/cart/cart_tab.dart'
+    as carttab;
 
 class HomeTab extends StatefulWidget {
   const HomeTab({super.key});
@@ -20,6 +22,17 @@ class _HomeTabState extends State<HomeTab> {
     return Scaffold(
       //App bar
       appBar: AppBar(
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => carttab.CartTab()),
+              );
+            },
+            icon: const Icon(Icons.shopping_cart),
+          ),
+        ],
         backgroundColor: Colors.transparent,
         elevation: 0,
         centerTitle: true,
@@ -45,31 +58,6 @@ class _HomeTabState extends State<HomeTab> {
             ],
           ),
         ),
-        actions: [
-          Padding(
-            padding: const EdgeInsets.only(
-              top: 15,
-              right: 15,
-            ),
-            child: GestureDetector(
-              onTap: () {},
-              child: Badge(
-                backgroundColor: CustomColors.customContrastColor,
-                label: Text(
-                  '2',
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 12,
-                  ),
-                ),
-                child: Icon(
-                  Icons.shopping_cart,
-                  color: CustomColors.customSwatchColor,
-                ),
-              ),
-            ),
-          )
-        ],
       ),
 
       body: Column(
@@ -101,30 +89,6 @@ class _HomeTabState extends State<HomeTab> {
                       const BorderSide(width: 0, style: BorderStyle.none),
                 ),
               ),
-            ),
-          ),
-
-          //Categorias
-          Container(
-            padding: const EdgeInsets.only(left: 25),
-            height: 40,
-            child: ListView.separated(
-              scrollDirection: Axis.horizontal,
-              itemBuilder: (_, index) {
-                return CategoryTile(
-                  onPressed: () {
-                    setState(() {
-                      selectedCategory = appData.categories[index];
-                    });
-                  },
-                  category: appData.categories[index],
-                  isSelected: appData.categories[index] == selectedCategory,
-                );
-              },
-              separatorBuilder: (_, index) => const SizedBox(
-                width: 10,
-              ),
-              itemCount: appData.categories.length,
             ),
           ),
 

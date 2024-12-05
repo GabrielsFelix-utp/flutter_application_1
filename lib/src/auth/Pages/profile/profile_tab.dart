@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/src/auth/Pages/common_widgets/custom_text_field.dart';
 import 'package:flutter_application_1/src/auth/config/app_data.dart' as appData;
+import 'package:flutter_application_1/src/auth/Pages/sign_in_screen.dart'
+    as screens;
 
 class ProfileTab extends StatefulWidget {
   const ProfileTab({Key? key}) : super(key: key);
@@ -17,7 +19,12 @@ class _ProfileTabState extends State<ProfileTab> {
         title: const Text('Perfil do usúario'),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => screens.SignInScreen()),
+              );
+            },
             icon: const Icon(Icons.logout),
           ),
         ],
