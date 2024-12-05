@@ -63,7 +63,7 @@ ItemModel papaya = ItemModel(
 ItemModel banana = ItemModel(
   description:
       'O Melhor Banana da região e que conta com o melhor preço de qualquer quitanda',
-  imgUrl: 'assets/fruits/papaya.png',
+  imgUrl: 'assets/fruits/banana.png',
   itemName: 'Banana',
   price: 1,
   unit: 'un',
