@@ -6,7 +6,7 @@ class OrderStatusWidget extends StatelessWidget {
   final bool isOverdue;
 
   final Map<String, int> allStatus = <String, int>{
-    'peding_paymente': 0,
+    'peding_payment': 0,
     'refunded': 1,
     'paid': 2,
     'preparing_purchase': 3,
