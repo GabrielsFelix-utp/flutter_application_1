@@ -82,7 +82,7 @@ class ItemTile extends StatelessWidget {
         Positioned(
           top: 4,
           right: 4,
-          child: GestureDetector(
+          child: InkWell(
             onTap: () {},
             child: Container(
               height: 40,

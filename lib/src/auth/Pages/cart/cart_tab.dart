@@ -89,7 +89,7 @@ class _CartTabState extends State<CartTab> {
                   height: 50,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: CustomColors.customSwatchColor,
+                      backgroundColor: Colors.green,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(18),
                       ),
@@ -111,6 +111,7 @@ class _CartTabState extends State<CartTab> {
                     child: const Text(
                       'Concluir Pedido',
                       style: TextStyle(
+                        color: Colors.white,
                         fontSize: 18,
                       ),
                     ),

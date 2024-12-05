@@ -42,7 +42,7 @@ class _BaseScreenState extends State<BaseScreen> {
           });
         },
         type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.amber,
+        backgroundColor: const Color.fromARGB(255, 33, 148, 77),
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.white.withAlpha(100),
         items: const [

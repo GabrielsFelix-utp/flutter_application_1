@@ -61,6 +61,7 @@ class _ProfileTabState extends State<ProfileTab> {
             height: 50,
             child: OutlinedButton(
               style: OutlinedButton.styleFrom(
+                backgroundColor: Colors.green,
                 side: const BorderSide(
                   color: Colors.green,
                 ),
@@ -71,7 +72,13 @@ class _ProfileTabState extends State<ProfileTab> {
               onPressed: () {
                 updatePassword();
               },
-              child: const Text('Atualizar senha'),
+              child: const Text(
+                'Atualizar senha',
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.white,
+                ),
+              ),
             ),
           ),
         ],
@@ -137,7 +144,13 @@ class _ProfileTabState extends State<ProfileTab> {
                           ),
                         ),
                         onPressed: () {},
-                        child: const Text('Atualizar'),
+                        child: const Text(
+                          'Atualizar',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                          ),
+                        ),
                       ),
                     ),
                   ],
